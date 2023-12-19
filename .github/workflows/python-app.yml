@@ -31,7 +31,7 @@ jobs:
     - name: Report Generation
       run: |
         #Fake a generator to gen junit-xml.
-        python report_generator.py
+        python tc_analysis_gen_xml.py
     - name: Surface failing tests
       if: always()
       uses: pmeier/pytest-results-action@main
