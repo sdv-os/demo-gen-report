@@ -8,7 +8,7 @@ jobs:
     # local repo
     # uses: ./.github/workflows/called-workflow.yml@v1
     # other repo
-    uses: sdv-os/demo-gen-report/.github/workflows/called-workflow.yml@master
+    uses: sdv-os/demo-gen-report/.github/workflows/called-workflow.yml@main
 
   job2:
     runs-on: ubuntu-latest
