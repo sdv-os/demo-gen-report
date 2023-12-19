@@ -6,7 +6,7 @@ for item in range(50):
     if item % 3 == 0:
         test_cases.append(junit_xml_output.TestCase("TC%d_failures" % item, "ASW Signal handler. DEMO:%d" % item,"failure"))
     else:
-        test_cases.append(junit_xml_output.TestCase("TC%d_success" % item, "TEST CASE %d SUCCESS." % item,"success"))
+        test_cases.append(junit_xml_output.TestCase("TC%d_xpass" % item, "TEST CASE %d SUCCESS." % item,"xpass"))
 junit_xml = junit_xml_output.JunitXml("example_usage", test_cases)
 xml_cont = junit_xml.dump()
 xml_cnt_lst = xml_cont.split('\n')
