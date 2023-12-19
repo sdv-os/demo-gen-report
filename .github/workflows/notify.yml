@@ -1,0 +1,15 @@
+name: CI notify
+on:
+  workflow_run:
+    workflows: ["CI build"]
+    types:
+      - completed
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Notify Slack and send eMail
+        run: echo "Send a notify e-mail..."
+        
