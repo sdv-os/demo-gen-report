@@ -8,7 +8,10 @@ for item in range(50):
     else:
         test_cases.append(junit_xml_output.TestCase("TC%d" % item, "TEST CASE %d SUCCESS." % item,"pass"))
 junit_xml = junit_xml_output.JunitXml("example_usage", test_cases)
-#print (junit_xml.dump())
+xml_cont = junit_xml.dump()
+xml_cnt_lst = xml_cont.split('\n')
+xml_dump = xml_cnt_lst[0] + "<testsuites>" + ''.join(xml_cnt_lst[1:]) + "</testsuites>"
+
 fp = open("results.xml","w")
-fp.write(junit_xml.dump()+'\n')
+fp.write(xml_dump)
 fp.close()
